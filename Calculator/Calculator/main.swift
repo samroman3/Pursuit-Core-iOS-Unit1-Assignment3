@@ -29,7 +29,7 @@ func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
         return {x, y in x + y }
     }
 }
-
+//randomguess function takes two arguments of double, a random operator from operatorarray and assigns it to "random" variable, calls mathstufffactory for random and assigns it to randomOperation. result is calculated with user input, if equal to user input it prints a confirmation and asks to calculate again
 func randomGuess(x:Double, y:Double) {
     let operatorArray = ["+","-","*","/"]
     print("Guess the Operator")
@@ -51,7 +51,7 @@ func randomGuess(x:Double, y:Double) {
     }
     
 }
-
+//calculate function prints first message, creates two empty Doubles. unwraps user response and assigns them to array using components function seperated by a space. operation variable calls mathstufffactory to create operation using components. if operator provided with user response is not equal to operators given it prints an error message. if operator is equal to ? randomGuess function is called. Else if user response first and second number have no value or are valued at zero, user is given an error. Else opperation is called with arguments given in userResponse and prints user calculation with result in a concaphaneted string. User is given option to calculate again.
 func calculate() {
     print("Enter a calculation in this format: 5 + 5")
     var x = Double()
